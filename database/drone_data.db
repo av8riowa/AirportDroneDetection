@@ -1,1 +1,1 @@
-
+INSERT INTO DroneData (drone_id, timestamp, location, telemetry) VALUES
