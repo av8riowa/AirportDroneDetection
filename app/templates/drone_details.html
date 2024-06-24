@@ -1,1 +1,13 @@
+<!-- app/templates/drone_details.html -->
+{% extends "base.html" %}
 
+{% block content %}
+<h2>Drone Details</h2>
+<ul>
+    <li><strong>Drone ID:</strong> {{ drone.drone_id }}</li>
+    <li><strong>Timestamp:</strong> {{ drone.timestamp }}</li>
+    <li><strong>Location:</strong> {{ drone.location }}</li>
+    <li><strong>Telemetry:</strong> {{ drone.telemetry }}</li>
+</ul>
+<a href="{{ url_for('main.index') }}">Back to Home</a>
+{% endblock %}
