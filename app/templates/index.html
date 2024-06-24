@@ -3,6 +3,7 @@
 
 {% block content %}
 <h2>Detected Drones</h2>
+<div id="map" style="height: 500px;"></div>
 <table>
     <tr>
         <th>Drone ID</th>
@@ -21,5 +22,7 @@
     </tr>
     {% endfor %}
 </table>
+<script>
+    var drones = {{ drones|tojson }};
+</script>
 {% endblock %}
-
