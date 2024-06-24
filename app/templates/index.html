@@ -1,1 +1,25 @@
+<!-- app/templates/index.html -->
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Detected Drones</h2>
+<table>
+    <tr>
+        <th>Drone ID</th>
+        <th>Timestamp</th>
+        <th>Location</th>
+        <th>Telemetry</th>
+        <th>Details</th>
+    </tr>
+    {% for drone in drones %}
+    <tr>
+        <td>{{ drone.drone_id }}</td>
+        <td>{{ drone.timestamp }}</td>
+        <td>{{ drone.location }}</td>
+        <td>{{ drone.telemetry }}</td>
+        <td><a href="{{ url_for('main.drone_details', id=drone.id) }}">Details</a></td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
 
